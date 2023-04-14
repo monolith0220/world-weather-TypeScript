@@ -1,6 +1,14 @@
 import "./results.scss";
 
-export const Results = (props) => {
+type Props = {
+	country: string;
+	cityName: string;
+	temperature: string;
+	conditionText: string;
+	icon: string;
+};
+
+export const Results = (props: { results: Props }) => {
 	return (
 		<div>
 			{props.results.cityName && <div className="results-city">{props.results.cityName}</div>}
