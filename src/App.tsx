@@ -15,6 +15,8 @@ const App = () => {
 		icon: "",
 	});
 	const getWeather = (e: { preventDefault: () => void }) => {
+		e.preventDefault();
+
 		axios.get(`https://api.weatherapi.com/v1/current.json?key=b07cc7ab6c12478b97f142240222502&q=${city}&aqi=no`).then((res) => {
 			setResults({
 				country: res.data.location.country,

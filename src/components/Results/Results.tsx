@@ -9,6 +9,8 @@ type Props = {
 };
 
 export const Results = (props: { results: Props }) => {
+	console.log(props);
+
 	return (
 		<div>
 			{props.results.cityName && <div className="results-city">{props.results.cityName}</div>}
